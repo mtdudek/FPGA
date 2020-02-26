@@ -1,0 +1,20 @@
+# system info Memory_test on 2019.11.25.22:07:51
+system_info:
+name,value
+DEVICE,5CSEMA5F31C6
+DEVICE_FAMILY,Cyclone V
+GENERATION_ID,1574716070
+#
+#
+# Files generated for Memory_test on 2019.11.25.22:07:51
+files:
+filepath,kind,attributes,module,is_top
+simulation/Memory_test.v,VERILOG,,Memory_test,true
+#
+# Map from instance-path to kind of module
+instances:
+instancePath,module
+Memory_test.Avalon_Master_Memory_0,Memory_test_Avalon_Master_Memory_0
+Memory_test.master_0,Memory_test_master_0
+Memory_test.onchip_memory2_0,Memory_test_onchip_memory2_0
+Memory_test.mm_interconnect_0,Memory_test_mm_interconnect_0

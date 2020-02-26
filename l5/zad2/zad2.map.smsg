@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at PWMs.v(43): always construct contains both blocking and non-blocking assignments File: /home/maciej/Pulpit/FPGA/My_IP/PWMs.v Line: 43

@@ -1,0 +1,98 @@
+#! /usr/bin/vvp
+:ivl_version "10.2 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "system";
+:vpi_module "vhdl_sys";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_0x556c582066a0 .scope module, "testbench" "testbench" 2 19;
+ .timescale 0 0;
+L_0x556c58232a70 .functor AND 1, L_0x556c58232b60, L_0x556c58232c00, C4<1>, C4<1>;
+L_0x556c58232d40 .functor AND 1, L_0x556c58232e00, L_0x556c58232a70, C4<1>, C4<1>;
+UDP_T_switch .udp/sequ "T_switch", 3, 2
+ ,"??1?0"
+ ,"??1*0"
+ ,"?*1?0"
+ ,"??*?-"
+ ,"?r00-"
+ ,"0r011"
+ ,"1r010"
+ ,"?N0?-"
+ ,"?_0?-"
+ ,"??0*-";
+L_0x7ff04a71c018 .functor BUFT 1, C4<1>, C4<0>, C4<0>, C4<0>;
+L_0x556c58232ef0 .udp UDP_T_switch, v0x556c58232210_0, L_0x556c58244020, L_0x7ff04a71c018;
+L_0x556c58243180 .udp UDP_T_switch, v0x556c58232210_0, L_0x556c58244020, L_0x556c582430b0;
+L_0x556c58243320 .udp UDP_T_switch, v0x556c58232210_0, L_0x556c58244020, L_0x556c58232a70;
+L_0x556c58243520 .udp UDP_T_switch, v0x556c58232210_0, L_0x556c58244020, L_0x556c58232d40;
+L_0x556c58243740 .functor NOT 1, L_0x556c582437b0, C4<0>, C4<0>, C4<0>;
+L_0x556c58243890 .functor NOT 1, L_0x556c58243950, C4<0>, C4<0>, C4<0>;
+L_0x556c58243a40 .functor AND 1, L_0x556c58243740, L_0x556c58243b00, C4<1>, C4<1>;
+L_0x556c58243d50 .functor AND 1, L_0x556c58243890, L_0x556c58243e70, C4<1>, C4<1>;
+L_0x556c58243f10 .functor AND 1, L_0x556c58243a40, L_0x556c58243d50, C4<1>, C4<1>;
+L_0x556c58244020 .functor OR 1, v0x556c58232830_0, L_0x556c58243f10, C4<0>, C4<0>;
+v0x556c58206820_0 .net *"_s1", 0 0, L_0x556c58232b60;  1 drivers
+v0x556c58231760_0 .net *"_s10", 0 0, L_0x556c58243180;  1 drivers
+v0x556c58231840_0 .net *"_s13", 0 0, L_0x556c582430b0;  1 drivers
+v0x556c58231900_0 .net *"_s14", 0 0, L_0x556c58243320;  1 drivers
+v0x556c582319e0_0 .net *"_s16", 0 0, L_0x556c58243520;  1 drivers
+v0x556c58231b10_0 .net *"_s20", 0 0, L_0x556c582437b0;  1 drivers
+v0x556c58231bf0_0 .net *"_s22", 0 0, L_0x556c58243950;  1 drivers
+v0x556c58231cd0_0 .net *"_s24", 0 0, L_0x556c58243b00;  1 drivers
+v0x556c58231db0_0 .net *"_s26", 0 0, L_0x556c58243e70;  1 drivers
+v0x556c58231e90_0 .net *"_s3", 0 0, L_0x556c58232c00;  1 drivers
+v0x556c58231f70_0 .net *"_s5", 0 0, L_0x556c58232e00;  1 drivers
+v0x556c58232050_0 .net *"_s6", 0 0, L_0x556c58232ef0;  1 drivers
+v0x556c58232130_0 .net/2s *"_s8", 0 0, L_0x7ff04a71c018;  1 drivers
+v0x556c58232210_0 .var "clk", 0 0;
+v0x556c582322d0_0 .net "i0", 0 0, L_0x556c58243a40;  1 drivers
+v0x556c58232390_0 .net "i1", 0 0, L_0x556c58243d50;  1 drivers
+v0x556c58232450_0 .net "no0", 0 0, L_0x556c58243740;  1 drivers
+v0x556c58232510_0 .net "no2", 0 0, L_0x556c58243890;  1 drivers
+v0x556c582325d0_0 .net "out", 3 0, L_0x556c58243390;  1 drivers
+v0x556c582326b0_0 .net "r1", 0 0, L_0x556c58243f10;  1 drivers
+v0x556c58232770_0 .net "r2", 0 0, L_0x556c58244020;  1 drivers
+v0x556c58232830_0 .var "rst", 0 0;
+v0x556c582328f0_0 .net "w2", 0 0, L_0x556c58232a70;  1 drivers
+v0x556c582329b0_0 .net "w3", 0 0, L_0x556c58232d40;  1 drivers
+L_0x556c58232b60 .part L_0x556c58243390, 0, 1;
+L_0x556c58232c00 .part L_0x556c58243390, 1, 1;
+L_0x556c58232e00 .part L_0x556c58243390, 2, 1;
+L_0x556c582430b0 .part L_0x556c58243390, 0, 1;
+L_0x556c58243390 .concat8 [ 1 1 1 1], L_0x556c58232ef0, L_0x556c58243180, L_0x556c58243320, L_0x556c58243520;
+L_0x556c582437b0 .part L_0x556c58243390, 0, 1;
+L_0x556c58243950 .part L_0x556c58243390, 2, 1;
+L_0x556c58243b00 .part L_0x556c58243390, 1, 1;
+L_0x556c58243e70 .part L_0x556c58243390, 3, 1;
+    .scope S_0x556c582066a0;
+T_0 ;
+    %delay 3, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x556c58232830_0, 0, 1;
+    %delay 3, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x556c58232830_0, 0, 1;
+    %end;
+    .thread T_0;
+    .scope S_0x556c582066a0;
+T_1 ;
+    %delay 1, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x556c58232210_0, 0, 1;
+    %delay 1, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x556c58232210_0, 0, 1;
+    %vpi_call 2 43 "$monitor", $time, " out=%d ", v0x556c582325d0_0 {0 0 0};
+    %jmp T_1;
+    .thread T_1;
+    .scope S_0x556c582066a0;
+T_2 ;
+    %vpi_call 2 45 "$monitor", $time, " out=%d ", v0x556c582325d0_0 {0 0 0};
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "z4.v";

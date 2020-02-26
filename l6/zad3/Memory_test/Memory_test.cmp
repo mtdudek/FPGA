@@ -1,0 +1,11 @@
+	component Memory_test is
+		port (
+			clk_clk          : in  std_logic                     := 'X';             -- clk
+			reset_reset_n    : in  std_logic                     := 'X';             -- reset_n
+			world_hex_screen : out std_logic_vector(41 downto 0);                    -- hex_screen
+			world_ledr       : out std_logic_vector(9 downto 0);                     -- ledr
+			world_key_input  : in  std_logic_vector(3 downto 0)  := (others => 'X'); -- key_input
+			world_switches   : in  std_logic_vector(9 downto 0)  := (others => 'X')  -- switches
+		);
+	end component Memory_test;
+

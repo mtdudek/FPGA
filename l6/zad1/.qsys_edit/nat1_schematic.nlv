@@ -1,0 +1,23 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst nat1.master_0.timing_adt -pg 1
+preplace inst nat1.master_0.clk_rst -pg 1
+preplace inst nat1.master_0.b2p_adapter -pg 1
+preplace inst nat1.master_0 -pg 1 -lvl 2 -y 100
+preplace inst nat1.master_0.p2b_adapter -pg 1
+preplace inst nat1 -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst nat1.master_0.jtag_phy_embedded_in_jtag_master -pg 1
+preplace inst nat1.master_0.p2b -pg 1
+preplace inst nat1.master_0.fifo -pg 1
+preplace inst nat1.master_0.b2p -pg 1
+preplace inst nat1.onchip_memory2_0 -pg 1 -lvl 3 -y 30
+preplace inst nat1.master_0.transacto -pg 1
+preplace inst nat1.master_0.clk_src -pg 1
+preplace inst nat1.clk_0 -pg 1 -lvl 1 -y 30
+preplace netloc EXPORT<net_container>nat1</net_container>(SLAVE)clk_0.clk_in,(SLAVE)nat1.clk) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>nat1</net_container>(MASTER)clk_0.clk,(SLAVE)onchip_memory2_0.clk1,(SLAVE)master_0.clk) 1 1 2 280 40 N
+preplace netloc EXPORT<net_container>nat1</net_container>(SLAVE)nat1.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc POINT_TO_POINT<net_container>nat1</net_container>(MASTER)master_0.master,(SLAVE)onchip_memory2_0.s1) 1 2 1 520
+preplace netloc FAN_OUT<net_container>nat1</net_container>(SLAVE)master_0.clk_reset,(SLAVE)onchip_memory2_0.reset1,(MASTER)clk_0.clk_reset) 1 1 2 260 60 N
+levelinfo -pg 1 0 50 690
+levelinfo -hier nat1 60 90 360 570 680

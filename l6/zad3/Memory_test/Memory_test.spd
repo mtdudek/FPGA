@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file path="simulation/Memory_test.v" type="VERILOG" />
+ <topLevel name="Memory_test" />
+ <deviceFamily name="cyclonev" />
+ <modelMap
+   controllerPath="Memory_test.onchip_memory2_0"
+   modelPath="Memory_test.onchip_memory2_0" />
+</simPackage>

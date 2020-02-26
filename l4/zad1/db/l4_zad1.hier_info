@@ -1,0 +1,65 @@
+|l4_zad1
+CLOCK2_50 => ~NO_FANOUT~
+CLOCK3_50 => ~NO_FANOUT~
+CLOCK4_50 => ~NO_FANOUT~
+CLOCK_50 => CLOCK_50.IN1
+KEY[0] => ~NO_FANOUT~
+KEY[1] => ~NO_FANOUT~
+KEY[2] => ~NO_FANOUT~
+KEY[3] => ~NO_FANOUT~
+LEDR[0] <= _PWM:o.port0
+LEDR[1] <= _PWM:o.port0
+LEDR[2] <= _PWM:o.port0
+LEDR[3] <= _PWM:o.port0
+LEDR[4] <= _PWM:o.port0
+LEDR[5] <= _PWM:o.port0
+LEDR[6] <= _PWM:o.port0
+LEDR[7] <= _PWM:o.port0
+LEDR[8] <= _PWM:o.port0
+LEDR[9] <= _PWM:o.port0
+SW[0] => b1[0].DATAIN
+SW[1] => b1[1].DATAIN
+SW[2] => b1[2].DATAIN
+SW[3] => b1[3].DATAIN
+SW[4] => b1[4].DATAIN
+SW[5] => b1[5].DATAIN
+SW[6] => b1[6].DATAIN
+SW[7] => b1[7].DATAIN
+SW[8] => b1[8].DATAIN
+SW[9] => b1[9].DATAIN
+
+
+|l4_zad1|_PWM:o
+pwm <= LessThan0.DB_MAX_OUTPUT_PORT_TYPE
+top[0] => Equal0.IN9
+top[1] => Equal0.IN8
+top[2] => Equal0.IN7
+top[3] => Equal0.IN6
+top[4] => Equal0.IN5
+top[5] => Equal0.IN4
+top[6] => Equal0.IN3
+top[7] => Equal0.IN2
+top[8] => Equal0.IN1
+top[9] => Equal0.IN0
+comp[0] => LessThan0.IN10
+comp[1] => LessThan0.IN9
+comp[2] => LessThan0.IN8
+comp[3] => LessThan0.IN7
+comp[4] => LessThan0.IN6
+comp[5] => LessThan0.IN5
+comp[6] => LessThan0.IN4
+comp[7] => LessThan0.IN3
+comp[8] => LessThan0.IN2
+comp[9] => LessThan0.IN1
+clk => internal[0].CLK
+clk => internal[1].CLK
+clk => internal[2].CLK
+clk => internal[3].CLK
+clk => internal[4].CLK
+clk => internal[5].CLK
+clk => internal[6].CLK
+clk => internal[7].CLK
+clk => internal[8].CLK
+clk => internal[9].CLK
+
+

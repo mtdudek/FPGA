@@ -1,0 +1,25 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst Memory_test.master_0.timing_adt -pg 1
+preplace inst Memory_test.onchip_memory2_0 -pg 1 -lvl 3 -y 120
+preplace inst Memory_test.master_0.transacto -pg 1
+preplace inst Memory_test.master_0.b2p_adapter -pg 1
+preplace inst Memory_test.master_0.fifo -pg 1
+preplace inst Memory_test.clk_0 -pg 1 -lvl 1 -y 220
+preplace inst Memory_test.master_0.b2p -pg 1
+preplace inst Memory_test.master_0.p2b_adapter -pg 1
+preplace inst Memory_test.master_0.p2b -pg 1
+preplace inst Memory_test.Avalon_Master_Memory_0 -pg 1 -lvl 2 -y 160
+preplace inst Memory_test.master_0.clk_rst -pg 1
+preplace inst Memory_test.master_0 -pg 1 -lvl 2 -y 50
+preplace inst Memory_test.master_0.jtag_phy_embedded_in_jtag_master -pg 1
+preplace inst Memory_test.master_0.clk_src -pg 1
+preplace inst Memory_test -pg 1 -lvl 1 -y 40 -regy -20
+preplace netloc EXPORT<net_container>Memory_test</net_container>(SLAVE)Avalon_Master_Memory_0.world,(SLAVE)Memory_test.world) 1 0 2 NJ 210 NJ
+preplace netloc FAN_IN<net_container>Memory_test</net_container>(MASTER)master_0.master,(MASTER)Avalon_Master_Memory_0.avalon_master,(SLAVE)onchip_memory2_0.s1) 1 2 1 520
+preplace netloc EXPORT<net_container>Memory_test</net_container>(SLAVE)Memory_test.reset,(SLAVE)clk_0.clk_in_reset) 1 0 1 NJ
+preplace netloc FAN_OUT<net_container>Memory_test</net_container>(SLAVE)onchip_memory2_0.reset1,(SLAVE)Avalon_Master_Memory_0.reset,(MASTER)clk_0.clk_reset,(SLAVE)master_0.clk_reset) 1 1 2 280 150 N
+preplace netloc FAN_OUT<net_container>Memory_test</net_container>(SLAVE)master_0.clk,(MASTER)clk_0.clk,(SLAVE)Avalon_Master_Memory_0.clock,(SLAVE)onchip_memory2_0.clk1) 1 1 2 260 130 N
+preplace netloc EXPORT<net_container>Memory_test</net_container>(SLAVE)Memory_test.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+levelinfo -pg 1 0 50 690
+levelinfo -hier Memory_test 60 90 360 570 680

@@ -50,14 +50,3 @@ module _Cnt_to_Cmp (output reg [9:0] cmp,input [3:0] cnt);
 		endcase
 	end
 endmodule
-
-module _edge_detector(output reg was_edge, input clk, input signal);
-	reg lstate;
-	always @(posedge clk) begin
-		case ({lstate,signal})
-			2'b01 : was_edge = 1;
-			default : was_edge = 0;
-		endcase
-		lstate <= signal;
-	end
-endmodule 

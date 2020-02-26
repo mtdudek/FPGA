@@ -1,0 +1,279 @@
+|zad2
+CLOCK2_50 => ~NO_FANOUT~
+CLOCK3_50 => ~NO_FANOUT~
+CLOCK4_50 => ~NO_FANOUT~
+CLOCK_50 => CLOCK_50.IN1
+HEX0[0] <= BCD_to_HEX_screen:s0.port0
+HEX0[1] <= BCD_to_HEX_screen:s0.port0
+HEX0[2] <= BCD_to_HEX_screen:s0.port0
+HEX0[3] <= BCD_to_HEX_screen:s0.port0
+HEX0[4] <= BCD_to_HEX_screen:s0.port0
+HEX0[5] <= BCD_to_HEX_screen:s0.port0
+HEX0[6] <= BCD_to_HEX_screen:s0.port0
+HEX1[0] <= BCD_to_HEX_screen:s1.port0
+HEX1[1] <= BCD_to_HEX_screen:s1.port0
+HEX1[2] <= BCD_to_HEX_screen:s1.port0
+HEX1[3] <= BCD_to_HEX_screen:s1.port0
+HEX1[4] <= BCD_to_HEX_screen:s1.port0
+HEX1[5] <= BCD_to_HEX_screen:s1.port0
+HEX1[6] <= BCD_to_HEX_screen:s1.port0
+HEX2[0] <= BCD_to_HEX_screen:s2.port0
+HEX2[1] <= BCD_to_HEX_screen:s2.port0
+HEX2[2] <= BCD_to_HEX_screen:s2.port0
+HEX2[3] <= BCD_to_HEX_screen:s2.port0
+HEX2[4] <= BCD_to_HEX_screen:s2.port0
+HEX2[5] <= BCD_to_HEX_screen:s2.port0
+HEX2[6] <= BCD_to_HEX_screen:s2.port0
+HEX3[0] <= BCD_to_HEX_screen:s3.port0
+HEX3[1] <= BCD_to_HEX_screen:s3.port0
+HEX3[2] <= BCD_to_HEX_screen:s3.port0
+HEX3[3] <= BCD_to_HEX_screen:s3.port0
+HEX3[4] <= BCD_to_HEX_screen:s3.port0
+HEX3[5] <= BCD_to_HEX_screen:s3.port0
+HEX3[6] <= BCD_to_HEX_screen:s3.port0
+HEX4[0] <= clk1Hz.DB_MAX_OUTPUT_PORT_TYPE
+HEX4[1] <= <GND>
+HEX4[2] <= <GND>
+HEX4[3] <= <GND>
+HEX4[4] <= <GND>
+HEX4[5] <= <GND>
+HEX4[6] <= <GND>
+HEX5[0] <= <GND>
+HEX5[1] <= <GND>
+HEX5[2] <= <GND>
+HEX5[3] <= <GND>
+HEX5[4] <= <GND>
+HEX5[5] <= <GND>
+HEX5[6] <= <GND>
+KEY[0] => b00.DATAIN
+KEY[1] => b10.DATAIN
+KEY[2] => ~NO_FANOUT~
+KEY[3] => ~NO_FANOUT~
+
+
+|zad2|count_sec:c0
+new_clk <= new_clk~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => new_clk~reg0.CLK
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+clk => cnt[13].CLK
+clk => cnt[14].CLK
+clk => cnt[15].CLK
+clk => cnt[16].CLK
+clk => cnt[17].CLK
+clk => cnt[18].CLK
+clk => cnt[19].CLK
+clk => cnt[20].CLK
+clk => cnt[21].CLK
+clk => cnt[22].CLK
+clk => cnt[23].CLK
+clk => cnt[24].CLK
+clk => cnt[25].CLK
+clk => cnt[26].CLK
+clk => cnt[27].CLK
+clk => cnt[28].CLK
+clk => cnt[29].CLK
+clk => cnt[30].CLK
+clk => cnt[31].CLK
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+count => cnt.OUTPUTSELECT
+
+
+|zad2|BCD_timer:tim
+min[0] <= BCD_counter:ml.port0
+min[1] <= BCD_counter:ml.port0
+min[2] <= BCD_counter:ml.port0
+min[3] <= BCD_counter:ml.port0
+min[4] <= BCD_counter:mh.port0
+min[5] <= BCD_counter:mh.port0
+min[6] <= BCD_counter:mh.port0
+min[7] <= BCD_counter:mh.port0
+sec[0] <= BCD_counter:sl.port0
+sec[1] <= BCD_counter:sl.port0
+sec[2] <= BCD_counter:sl.port0
+sec[3] <= BCD_counter:sl.port0
+sec[4] <= BCD_counter:sh.port0
+sec[5] <= BCD_counter:sh.port0
+sec[6] <= BCD_counter:sh.port0
+sec[7] <= BCD_counter:sh.port0
+rst => rst.IN4
+clk => clk.IN4
+
+
+|zad2|BCD_timer:tim|BCD_counter:sl
+value[0] <= value[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+value[1] <= value[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+value[2] <= value[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+value[3] <= value[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rst => value[0]~reg0.ACLR
+rst => value[1]~reg0.ACLR
+rst => value[2]~reg0.ACLR
+rst => value[3]~reg0.ACLR
+clk => value[0]~reg0.CLK
+clk => value[1]~reg0.CLK
+clk => value[2]~reg0.CLK
+clk => value[3]~reg0.CLK
+count => value[0]~reg0.ENA
+count => value[3]~reg0.ENA
+count => value[2]~reg0.ENA
+count => value[1]~reg0.ENA
+set_zero => always0.IN1
+
+
+|zad2|BCD_timer:tim|BCD_counter:sh
+value[0] <= value[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+value[1] <= value[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+value[2] <= value[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+value[3] <= value[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rst => value[0]~reg0.ACLR
+rst => value[1]~reg0.ACLR
+rst => value[2]~reg0.ACLR
+rst => value[3]~reg0.ACLR
+clk => value[0]~reg0.CLK
+clk => value[1]~reg0.CLK
+clk => value[2]~reg0.CLK
+clk => value[3]~reg0.CLK
+count => value[0]~reg0.ENA
+count => value[3]~reg0.ENA
+count => value[2]~reg0.ENA
+count => value[1]~reg0.ENA
+set_zero => always0.IN1
+
+
+|zad2|BCD_timer:tim|BCD_counter:ml
+value[0] <= value[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+value[1] <= value[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+value[2] <= value[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+value[3] <= value[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rst => value[0]~reg0.ACLR
+rst => value[1]~reg0.ACLR
+rst => value[2]~reg0.ACLR
+rst => value[3]~reg0.ACLR
+clk => value[0]~reg0.CLK
+clk => value[1]~reg0.CLK
+clk => value[2]~reg0.CLK
+clk => value[3]~reg0.CLK
+count => value[0]~reg0.ENA
+count => value[3]~reg0.ENA
+count => value[2]~reg0.ENA
+count => value[1]~reg0.ENA
+set_zero => always0.IN1
+
+
+|zad2|BCD_timer:tim|BCD_counter:mh
+value[0] <= value[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+value[1] <= value[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+value[2] <= value[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+value[3] <= value[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+rst => value[0]~reg0.ACLR
+rst => value[1]~reg0.ACLR
+rst => value[2]~reg0.ACLR
+rst => value[3]~reg0.ACLR
+clk => value[0]~reg0.CLK
+clk => value[1]~reg0.CLK
+clk => value[2]~reg0.CLK
+clk => value[3]~reg0.CLK
+count => value[0]~reg0.ENA
+count => value[3]~reg0.ENA
+count => value[2]~reg0.ENA
+count => value[1]~reg0.ENA
+set_zero => always0.IN1
+
+
+|zad2|BCD_to_HEX_screen:s0
+screen[0] <= screen.DB_MAX_OUTPUT_PORT_TYPE
+screen[1] <= screen.DB_MAX_OUTPUT_PORT_TYPE
+screen[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+screen[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+screen[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+screen[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+screen[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_input[0] => Decoder0.IN3
+bcd_input[1] => Decoder0.IN2
+bcd_input[2] => Decoder0.IN1
+bcd_input[3] => Decoder0.IN0
+
+
+|zad2|BCD_to_HEX_screen:s1
+screen[0] <= screen.DB_MAX_OUTPUT_PORT_TYPE
+screen[1] <= screen.DB_MAX_OUTPUT_PORT_TYPE
+screen[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+screen[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+screen[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+screen[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+screen[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_input[0] => Decoder0.IN3
+bcd_input[1] => Decoder0.IN2
+bcd_input[2] => Decoder0.IN1
+bcd_input[3] => Decoder0.IN0
+
+
+|zad2|BCD_to_HEX_screen:s2
+screen[0] <= screen.DB_MAX_OUTPUT_PORT_TYPE
+screen[1] <= screen.DB_MAX_OUTPUT_PORT_TYPE
+screen[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+screen[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+screen[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+screen[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+screen[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_input[0] => Decoder0.IN3
+bcd_input[1] => Decoder0.IN2
+bcd_input[2] => Decoder0.IN1
+bcd_input[3] => Decoder0.IN0
+
+
+|zad2|BCD_to_HEX_screen:s3
+screen[0] <= screen.DB_MAX_OUTPUT_PORT_TYPE
+screen[1] <= screen.DB_MAX_OUTPUT_PORT_TYPE
+screen[2] <= Decoder0.DB_MAX_OUTPUT_PORT_TYPE
+screen[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+screen[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+screen[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+screen[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+bcd_input[0] => Decoder0.IN3
+bcd_input[1] => Decoder0.IN2
+bcd_input[2] => Decoder0.IN1
+bcd_input[3] => Decoder0.IN0
+
+

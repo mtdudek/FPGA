@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preferences>
+ <debug showDebugMenu="0" />
+ <systemtable filter="All Interfaces">
+  <columns>
+   <connections preferredWidth="111" />
+   <irq preferredWidth="34" />
+   <name preferredWidth="242" />
+   <export preferredWidth="326" />
+  </columns>
+ </systemtable>
+ <library
+   expandedCategories="Project/FPGA_2019,Library,Project"
+   sortMethod="CATEGORY_PATH" />
+ <window width="1841" height="800" x="70" y="27" />
+ <generation simulation="NONE" greybox="0" />
+</preferences>

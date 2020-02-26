@@ -1,0 +1,15 @@
+	component audio is
+		port (
+			audio_ADCDAT  : in    std_logic := 'X'; -- ADCDAT
+			audio_ADCLRCK : in    std_logic := 'X'; -- ADCLRCK
+			audio_BCLK    : in    std_logic := 'X'; -- BCLK
+			audio_DACDAT  : out   std_logic;        -- DACDAT
+			audio_DACLRCK : in    std_logic := 'X'; -- DACLRCK
+			audio_clk_clk : out   std_logic;        -- clk
+			av_i2c_SDAT   : inout std_logic := 'X'; -- SDAT
+			av_i2c_SCLK   : out   std_logic;        -- SCLK
+			clk_clk       : in    std_logic := 'X'; -- clk
+			reset_reset_n : in    std_logic := 'X'  -- reset_n
+		);
+	end component audio;
+
